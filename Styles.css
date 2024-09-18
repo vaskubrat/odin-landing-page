@@ -1,0 +1,15 @@
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    margin-left: 0;
+    
+}
