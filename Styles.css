@@ -1,3 +1,48 @@
+.page-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.hero-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.first-section {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.first-section-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-section-text.button {
+    flex-grow: 0;
+}
+
+.hero-banner, .footer {
+    background-color: #1F2937;
+    color: #E5E7EB;
+    font-size: 18px;
+}
+
+.hero-banner.h1 {
+    color: #F9FAF8;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.nav-logo {
+    font-size: 24px;
+    color: #F9FAF8;
+}
+
 .nav-bar {
     display: flex;
     align-items: center;
@@ -10,6 +55,26 @@ li {
 .nav-links {
     display: flex;
     gap: 25px;
-    margin-left: 0;
-    
+}
+
+
+.random-info {
+    display: flex;
+    gap: 25px;
+}
+
+.square {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 200px;
+}
+
+.quote-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.call-to-action-container {
+    background-color: blue;
+    color: white;
 }
