@@ -7,24 +7,18 @@
 .page-container-elements {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .hero-banner, .random-info, .quote-section, .call-to-action, .footer {
     flex-grow: 1;
     box-sizing: border-box;
     margin: 0;
-    padding: 15px;
+    padding: 10px;
 }
 
 .hero-banner, .footer {
     background-color: #1F2937;
 }
-
-/*.hero-banner {
-    height: 25vh;
-}
-*/
 
 .nav-bar {
     display: flex;
@@ -43,9 +37,11 @@
 
 .first-section {
     display: flex;
-    gap: 50px;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 75px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .nav-bar, .first-section-text {
@@ -56,13 +52,14 @@
 .nav-logo {
     font-size: 24px;
     color: #f9faf8;
+    width: 50%;
 }
 
 button {
     background-color: #3882F6;
     color: #E5E7EB;
     font-weight: 700;
-    padding: 5px;
+    padding: 5px 15px 5px 15px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -70,7 +67,7 @@ button {
 .first-section-text {
     display: flex;
     flex-direction: column;
-    
+    flex-basis: 40%;
 }
 
 .first-section-text h1 {
@@ -86,45 +83,47 @@ button {
 }
 
 .first-section-img {
-    object-fit: contain;
-    width: 70%;
+    object-fit: contain; 
     min-width: 100px;
-    max-width: 500px;
+    max-width: 400px;
     height: auto;
+    border-radius: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.nav-bar, .first-section {
+    width: 70%;
+    margin: 0 auto;
 }
 
 .random-info {
     display: flex;
     flex-direction: column;
-
-    
-    background-color: aqua;
-    /*
-    height: 25vh;
-    */
 }
 
 .random-info h1 {
     font-size: 36px;
     font-weight: 900;
     color: #1F2937;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-
 
 .squares {
     display: flex;
     flex-direction: row;
-    flex-basis: 80%;
+    width: 80%; /*not sure why it's not aligned with .nav-bar and .first-section if I put 70%, seeing as the parents are in same hierarchy and width*/
+    margin: 0 auto;
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 50px;
-    gap: 10px;
+    gap: 20px;
 }
 
 .square img {
-    border: 2px solid #3882F6;
+    border: 3.5px solid #3882F6;
     border-radius: 10px;
 }
 
@@ -155,59 +154,71 @@ button {
     padding-bottom: 10px;
 }
 
-.quote-section footer {
+.quote-footer {
+    color:#1F2937;
     align-self: flex-end;
     padding-right: 200px; /*could not figure out a better way to align footer to above text...*/
     font-weight: 900;
 }
 
-
-/*
-.quote-section {
-    height: 25vh;
-}
-
-.call-to-action-footer-container {
-    height: 25vh;
-}
-*/
-.call-to-action-footer-container {
-    flex-grow: 1;
+.call-to-action-container {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    width: 100%;
+    flex-wrap: wrap;
+   
 }
 
 .call-to-action {
+    display: flex;
+    flex-wrap: wrap;
     background-color: #3882F6;
     color: #E5E7EB;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
-    align-items: center;
+    border-radius: 5px;
+    align-self: center;
+    margin: 50px;
 }
 
 .call-to-action-text {
-    display: flex;
-    flex-direction: column;
+    padding: 20px;
+}
+
+.call-to-action-text h3 {
+    font-size: 24px;
+    font-weight: 900;
 }
 
 .call-to-action button {
-    border: 2px solid #E5E7EB;
+    border:#E5E7EB 2px solid;
+    align-self: center;
+    margin-right: 20px;
+
 }
 
-.call-to-action-footer-container .footer {
+.footer-text {
     color: #E5E7EB;
+    text-align: center;
+    padding: 20px;
 }
+
+
+
+
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
+
+
+    .nav-bar, .nav-links{
+        flex-direction: column;
+    }
+    .nav-bar, .first-section {
+        width: 90%;
+    }
+
     .first-section {
         display: flex;
         flex-direction: column;
-        justify-content: center; /*why doesn't this have any effect?*/
+        align-items: center;
+       
     }
 
     .first-section-img {
@@ -218,8 +229,24 @@ button {
         margin-bottom: -40px;
     }
 
+    .random-info h1 {
+        margin-right: 80px;
+        margin-left: 80px;
+    }
+   
+
+    .quote-section p {
+        width: 70%;
+    }
+
     .quote-section footer {
-     
         padding-right: 40px;
+    }
+
+    .call-to-action button {
+        align-self: center;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    
     }
 }
